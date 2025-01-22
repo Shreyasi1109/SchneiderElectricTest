@@ -1,9 +1,5 @@
-﻿using Moq;
-using Xunit;
+﻿using Xunit;
 using GridGame.Service.Impl.Minesweeper;
-using System;
-using GridGame.Constants;
-using Microsoft.Extensions.Configuration;
 
 namespace GridGame.UnitTest
 {

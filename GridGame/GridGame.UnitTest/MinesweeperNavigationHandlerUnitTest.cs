@@ -1,9 +1,6 @@
-﻿using Moq;
-using Xunit;
+﻿using Xunit;
 using GridGame.Service.Impl.Minesweeper;
 using System;
-using GridGame.Constants;
-using Microsoft.Extensions.Configuration;
 
 namespace GridGame.UnitTest
 {
@@ -24,10 +21,8 @@ namespace GridGame.UnitTest
         [InlineData(ConsoleKey.Escape, 0, 0)]
         public void GetMoveOffset_ShouldReturnCorrectOffset_WhenKeyIsPressed(ConsoleKey key, int expectedRowOffset, int expectedColOffset)
         {
-            // Act
             var result = _navigationHandler.GetMoveOffset(key);
 
-            // Assert
             Assert.Equal(expectedRowOffset, result.rowOffset);
             Assert.Equal(expectedColOffset, result.colOffset);
         }
